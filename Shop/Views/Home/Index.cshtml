@@ -1,0 +1,13 @@
+﻿@using Shop.ViewModel;
+@model ViewHome
+
+
+<h2>Вся пивалда</h2>
+<div class="row mt-5 mb-2">
+    @{
+        foreach(Beer beer in Model.FavBeer)
+        {
+            @Html.Partial("AllBeer", beer)
+        }
+    }
+</div>

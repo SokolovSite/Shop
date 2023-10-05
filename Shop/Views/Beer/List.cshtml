@@ -1,0 +1,13 @@
+﻿
+
+<h2>@Model.beerCategory</h2>
+    <div class="row mt-5 mb-2">
+        @{
+            foreach (Beer beer in Model.AllBeer)
+            {   
+                //подключение шаблона из html AllBeer
+                @Html.Partial("AllBeer", beer)
+            }
+        }
+    </div>
+
