@@ -18,6 +18,7 @@ namespace Shop.Controllers
             _shopCart = shopCart;
         }
 
+        [HttpGet]
         public ViewResult Index()
         {
             var items = _shopCart.GetShopItems();
@@ -32,6 +33,7 @@ namespace Shop.Controllers
             return View(obj);
         }
 
+        [HttpGet]
         public RedirectToActionResult AddToCart(int id)
         {
             var item = _beerRepository.Beer.FirstOrDefault(x => x.Id == id);

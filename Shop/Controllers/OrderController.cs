@@ -17,6 +17,7 @@ namespace Shop.Controllers
         }
 
         //Функция для получения формы
+        [HttpGet]
         public IActionResult Checkout()
         {
             return View();
@@ -43,6 +44,7 @@ namespace Shop.Controllers
             return View(order);
         }
 
+        [HttpGet]
         public IActionResult Complete() 
         {
             ViewBag.Message = "Затарено :)";

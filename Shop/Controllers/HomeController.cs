@@ -16,6 +16,7 @@ namespace Shop.Controllers
             _beerRepository = beerRepository;
         }
 
+        [HttpGet]
         public ViewResult Index()
         {
 

@@ -16,41 +16,19 @@ namespace Shop.Controllers
             _beerCategories = iBeerCategory;
         }
 
-
         //пути в случае которых попадем в условие фильтрации пути
-        [Route("Beer/List")]
-        [Route("Beer/List/{category}")]
+        [HttpGet("Beer/List")]
         public ViewResult List(string category)
         {
-
+            
             //путь категории в URL и его проверка
             IEnumerable<Beer> beer = null;
-            string beerCategory = "";
-
-            //проверка и сортирока категории по id
-            if(string.IsNullOrEmpty(category))
-            {
-                beer = _allBeer.Beer.OrderBy(i => i.Id);
-            }
-            else
-            {
-                if(string.Equals("alcoholbeer", category, StringComparison.OrdinalIgnoreCase))
-                {
-                    beer = _allBeer.Beer.Where(i => i.Category.CategoryName.Equals("Алкогольное")).OrderBy(i => i.Id);
-                    beerCategory = "Если хочешь нахрюкаться";
-                }
-                else if (string.Equals("alcoholfree", category, StringComparison.OrdinalIgnoreCase))
-                {
-                    beer = _allBeer.Beer.Where(i => i.Category.CategoryName.Equals("Безалкогольное")).OrderBy(i => i.Id);
-                    beerCategory = "Если хочешь освежиться";
-                }
-            }
-
+            beer = _allBeer.Beer.OrderBy(i => i.Id);
+   
             //создание самого объекта
             var beerObj = new BeerViewModel
             {
                 AllBeer = beer,
-                beerCategory = beerCategory,
             };
 
             ViewBag.Title = "Пивко";
