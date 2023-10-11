@@ -5,7 +5,7 @@ using Shop.Models;
 
 namespace Shop.Repository
 {
-    public class BeerRepository : IAllBeer
+    public class IBeerRepository : IAllBeer
     {
 
         //переменная для работы с файлом AppDB для работы с БД
@@ -13,7 +13,7 @@ namespace Shop.Repository
 
 
         //ссылка на файл AppDB для работы с ним
-        public BeerRepository(AppDBContext AppDBContext)
+        public IBeerRepository(AppDBContext AppDBContext)
         {
             this.AppDBContext = AppDBContext;
         }

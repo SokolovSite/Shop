@@ -3,7 +3,7 @@ using Shop.Models;
 
 namespace Shop.Repository
 {
-    public class OrdersRepository : IAllOrders
+    public class IOrdersRepository : IAllOrders
     {
         //переменная для добавления в бд
         private readonly AppDBContext appDBContext;
@@ -11,7 +11,7 @@ namespace Shop.Repository
         //переменная для работы с корзиной
         private readonly ShopCart shopCart;
 
-        public OrdersRepository (AppDBContext appDBContext, ShopCart shopCart)
+        public IOrdersRepository (AppDBContext appDBContext, ShopCart shopCart)
         {
             this.appDBContext = appDBContext;
             this.shopCart = shopCart;

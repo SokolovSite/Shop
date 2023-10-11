@@ -12,9 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 //использование всех интерфейсов с БД
-builder.Services.AddTransient<IBeerCategory, CategoryRepository>(); 
-builder.Services.AddTransient<IAllBeer, BeerRepository>();
-builder.Services.AddTransient<IAllOrders, OrdersRepository>();
+builder.Services.AddTransient<IBeerCategory, ICategoryRepository>(); 
+builder.Services.AddTransient<IAllBeer, IBeerRepository>();
+builder.Services.AddTransient<IAllOrders, IOrdersRepository>();
 
 /* использование всех интерфейсов с моксами
 builder.Services.AddTransient<IBeerCategory, MockCategory>();

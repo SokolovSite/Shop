@@ -2,7 +2,7 @@
 
 namespace Shop.ViewModel
 {
-    public class ViewShopCart
+    public class ShopCartViewModel
     {
         public ShopCart ShopCart { get; set; }
     }

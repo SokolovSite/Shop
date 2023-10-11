@@ -3,7 +3,7 @@ using Shop.Models;
 
 namespace Shop.Repository
 {
-    public class CategoryRepository : IBeerCategory
+    public class ICategoryRepository : IBeerCategory
     {
 
         //переменная для работы с файлом AppDB для работы с БД
@@ -11,7 +11,7 @@ namespace Shop.Repository
 
 
         //ссылка на файл AppDB для работы с ним
-        public CategoryRepository(AppDBContext AppDBContext)
+        public ICategoryRepository(AppDBContext AppDBContext)
         {
             this.AppDBContext = AppDBContext;
         }

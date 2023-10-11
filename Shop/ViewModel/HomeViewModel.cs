@@ -2,7 +2,7 @@
 
 namespace Shop.ViewModel
 {
-    public class ViewHome
+    public class HomeViewModel
     { 
         public IEnumerable<Beer> FavBeer { get; set; }
     }

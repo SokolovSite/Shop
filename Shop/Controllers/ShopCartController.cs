@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shop.Interfaces;
 using Shop.Models;
-using Shop.Repository;
 using Shop.ViewModel;
 
 namespace Shop.Controllers
@@ -25,7 +24,7 @@ namespace Shop.Controllers
             _shopCart.ListShopItems = items;
 
 
-            var obj = new ViewShopCart
+            var obj = new ShopCartViewModel
             {
                 ShopCart = _shopCart,
             };

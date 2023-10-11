@@ -19,7 +19,7 @@ namespace Shop.Controllers
         public ViewResult Index()
         {
 
-            var homeBeer = new ViewHome
+            var homeBeer = new HomeViewModel
             {
                 FavBeer = _beerRepository.GetFavouriteBeer
             };

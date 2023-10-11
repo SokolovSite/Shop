@@ -24,7 +24,6 @@ namespace Shop.Controllers
         {
 
             //путь категории в URL и его проверка
-            string _category = category;
             IEnumerable<Beer> beer = null;
             string beerCategory = "";
 
@@ -48,7 +47,7 @@ namespace Shop.Controllers
             }
 
             //создание самого объекта
-            var beerObj = new ViewBeerModel
+            var beerObj = new BeerViewModel
             {
                 AllBeer = beer,
                 beerCategory = beerCategory,

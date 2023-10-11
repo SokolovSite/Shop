@@ -2,7 +2,7 @@
 
 namespace Shop.ViewModel
 {
-    public class ViewBeerModel
+    public class BeerViewModel
     {
         public IEnumerable<Beer> AllBeer { get; set; }
         public string beerCategory { get; set; }
